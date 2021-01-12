@@ -1,4 +1,4 @@
-# Cariad Eccleston 👩🏼‍💻 🏳️‍🌈 🏳️‍⚧️ 😷
+# Cariad Eccleston 👩🏼‍💻 🏳️‍🌈 😷
 
 Hey! I’m **Cariad**, pronounced "carry-add". I’m a **freelance DevOps engineer**, and I **work remotely** from the seaside in Exmouth, UK.
 
