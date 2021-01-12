@@ -34,11 +34,68 @@ Just drag-and-drop your site into the S3 bucket we deploy, and it’s live behin
 
 Perfect for Hugo, Jekyll and other static site generators!
 
+### s3headersetter 🎁
 
-<!-- 
+[s3headersetter](https://github.com/cariad/s3headersetter) is a cross-platform CLI tool for setting HTTP headers on Amazon Web Services S3 objects.
 
-- 🎁 [s3headersetter](https://github.com/cariad/s3headersetter): Cross-platform CLI tool for setting HTTP headers on Amazon Web Services S3 objects.
-- ∞ [py-tupper](https://github.com/cariad/py-tupper): Python package for plotting Tupper's Self-Referential Formula.
+Simply create a configuration file to describe the headers and objects to match:
+
+```yaml
+rules:
+  - header:        Cache-Control
+    when:
+      - extension: .html
+        then:      max-age=3600, public
+      - extension: .css
+        then:      max-age=604800, public
+    else:          max-age=31536000, public
+
+  - header:        Content-Type
+    when:
+      - extension: .woff2
+        then:      font/woff2
+```
+
+…then run `s3headersetter` to connect and update your objects:
+
+```bash
+s3headersetter -config config.yml -bucket my-website-bucket
+```
+
+### py-tupper ∞
+
+A Python package for plotting Tupper's Self-Referential Formula.
+
+Just install and run to see something cool:
+
+```bash
+pip3 install tupper
+python3 -m tupper
+```
+
+```text
+        █                   █                █ ██ █     █                █  █ █     █    █ ██ █      █   █
+        █                   █ █      █       █  █ █     █                █  █ █     █    █  █ █      █   █
+██      █                  █  █      █    ██ █  █ █ █ █ █ ██ ████  ███ ███ █  █ █ █ █    █  █  █      █  █
+ █      █                  █  █  █ █ █       █ █  █  █  █    █ █ █ █ █ █ █ █  █ █ █ █    █ █   █      █  █
+ █      █                  █  █  █ █ █       █ █  █ █ █ █    █ █ █ ███ ███ █  █  █  █    █ █   █      █  █
+ █      █               █ █   █   █  █  ██        █     █                  █  █ █   █  █       █   ██  █ █
+███   █ █               █ █   █  █   █ █  █       █     █                   █ █     █  █      █   █  █ █ █
+     █  █ ██ █   ██   ███ █   █      █   █        ███ ███                   █ ███ ███ █       █     █  █ █
+███ █   █ █ █ █ █  █ █  █ █   █ ████ █  █                                                          █   █ █
+     █  █ █ █ █ █  █ █  █ █   █      █ █                                                          █    █ █
+██    █ █ █ █ █  ██   ███ █   █ █ ██ █ ████                                                       ████ █ █
+  █     █                 █   █ █  █ █                                                          █      █ █
+ █      █                  █  █ █  █ █                                                          █     █  █
+█       █                  █  █ █ █  █                                                         █      █  █
+███     █                  █  █ █ █  █                                                                █  █
+        █                   █ █      █                                                               █   █
+        ███                 █ ███  ███                                                               █ ███
+```
+
+<!--
+
+-  [py-tupper](https://github.com/cariad/py-tupper):
 - [cariad/ci](https://github.com/cariad/ci): Docker image for all my CI/CD pipelines. `aws`, `pipenv`, `pyenv`, `shellcheck` and other delicious stuff.
 - [cariad/hugo-ci](https://github.com/cariad/hugo-ci): Docker image for building and testing (and optionally deploying) Hugo sites.
 - [hugo-ci-action](https://github.com/marketplace/actions/build-validate-and-deploy-a-hugo-site): GitHub Action for building and testing (and optionally deploying) Hugo sites.
