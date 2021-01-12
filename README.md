@@ -7,6 +7,7 @@ Hey! I’m **Cariad**, pronounced "carry-add". I’m a **freelance DevOps engine
 - 🏳️‍🌈 **Transgender**. Pronouns are **she/her**.
 - 🤔 Working on my **presentation confidence** and **books**.
 - 💬 Ask me about **any of my projects** and **contracting availability**.
+- ✉️ [@cariadeccleston](https://twitter.com/cariadeccleston) • [cariad@hey.com](mailto:cariad@hey.com)
 
 ## My values 💕
 
@@ -33,6 +34,48 @@ With (almost) one-click, [sitestack.cloud](https://sitestack.cloud) deploys all 
 Just drag-and-drop your site into the S3 bucket we deploy, and it’s live behind **HTTPS**, a **global CDN** and **beautiful URLs**; no `index.html` on the end.
 
 Perfect for Hugo, Jekyll and other static site generators!
+
+### cariad/hugo-ci ⛴
+
+[cariad/hugo-ci](https://github.com/cariad/hugo-ci) is a Docker image for building and testing (and optionally deploying) Hugo sites.
+
+Use it in your local development directory to build your Hugo site and verify that your **HTML is well-formed**, **valid** and all your **images have `alt` attributes** before you go live:
+
+```bash
+docker run --mount "type=bind,source=$(pwd),target=/workspace" --rm cariad/hugo-ci
+```
+
+### hugo-ci-action ⚙️
+
+[hugo-ci-action](https://github.com/marketplace/actions/build-validate-and-deploy-a-hugo-site) is a GitHub Action for building and testing (and optionally deploying) Hugo sites.
+
+Build and test your Hugo site with just one line:
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cariad/hugo-ci-action@v1
+```
+
+To deploy after testing, set AWS credentials in your workflow's environment variables then add `with/s3-bucket`:
+
+```yaml
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cariad/hugo-ci-action@v1
+        with:
+          s3-bucket: mybucket
+```
 
 ### s3headersetter 🎁
 
@@ -64,7 +107,7 @@ s3headersetter -config config.yml -bucket my-website-bucket
 
 ### py-tupper ∞
 
-A Python package for plotting Tupper's Self-Referential Formula.
+A Python package for plotting [Tupper's Self-Referential Formula](https://cariad.io/tupper/).
 
 Just install and run to see something cool:
 
@@ -93,25 +136,9 @@ python3 -m tupper
         ███                 █ ███  ███                                                               █ ███
 ```
 
-<!--
+## Availability
 
--  [py-tupper](https://github.com/cariad/py-tupper):
-- [cariad/ci](https://github.com/cariad/ci): Docker image for all my CI/CD pipelines. `aws`, `pipenv`, `pyenv`, `shellcheck` and other delicious stuff.
-- [cariad/hugo-ci](https://github.com/cariad/hugo-ci): Docker image for building and testing (and optionally deploying) Hugo sites.
-- [hugo-ci-action](https://github.com/marketplace/actions/build-validate-and-deploy-a-hugo-site): GitHub Action for building and testing (and optionally deploying) Hugo sites.
- -->
+I’m currently in a very happy contract, but I’d love to chat about any exciting projects you have coming up later in 2021.
 
-<!--
-**cariad/cariad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- ✉️ [cariad@hey.com](mailto:cariad@hey.com)
+- 🐦 [@cariadeccleston](https://twitter.com/cariadeccleston)
