@@ -24,6 +24,7 @@ Hey! I’m **Cariad**, pronounced "carry-add". I’m a **freelance DevOps engine
     - Build and take care of the **CI/CD pipeline**.
     - Think about **encryption**, **serverless**, **scaling**, **monitoring**, **resilience** and **recovery**. _Y’know, the fun stuff!_
 - 2020: **NHS Digital**, building .NET SOAP services and automated tests.
+- 2005-2019: Full-time software developer and DevOps team lead at **Thomson Reuters**.
 
 ## Recent projects 🎉
 
