@@ -6,7 +6,7 @@ Hey! I’m **Cariad**, pronounced "carry-add". I’m a **freelance DevOps engine
 - 🏳️‍🌈 **Transgender**. Pronouns are **she/her**.
 - 🤔 Working on my **presentation confidence** and **books**.
 - 💬 Ask me about **any of my projects** and **contracting availability**!
-- ✉️ **[cariad.io](https://cariad.io)** • **[cariad@cariad.io](mailto:cariad@cariad.io)** • <a hrel="me" ref="https://tech.lgbt/@cariad">@cariad@tech.lgbt</a>
+- ✉️ **[cariad.io](https://cariad.io)** • **[cariad@cariad.io](mailto:cariad@cariad.io)** • <a rel="me" href="https://tech.lgbt/@cariad">tech.lgbt/@cariad</a>
 
 ## Recent contracts 🙋‍♀️
 
