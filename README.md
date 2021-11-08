@@ -30,14 +30,6 @@ For example:
 - `wev` can [set Amazon Web Services named profiles per-project](https://wevcli.app/examples/aws-profile-per-project).
 - `wev` can [request an Amazon Web Services CodeArtifact authorisation token on behalf of pipenv](https://wevcli.app/examples/aws-codeartifact).
 
-### sitestack.cloud 🌍
-
-With (almost) one-click, [sitestack.cloud](https://sitestack.cloud) deploys all the infrastructure you need to host a static website in your own Amazon Web Services account.
-
-Just drag-and-drop your site into the S3 bucket we deploy, and it’s live behind **HTTPS**, a **global CDN** and **beautiful URLs**; no `index.html` on the end.
-
-Perfect for Hugo, Jekyll and other static site generators!
-
 ### s3headersetter 🎁
 
 [s3headersetter](https://github.com/cariad/s3headersetter) is a cross-platform CLI tool for setting HTTP headers on Amazon Web Services S3 objects.
@@ -64,35 +56,4 @@ rules:
 
 ```bash
 s3headersetter -config config.yml -bucket my-website-bucket
-```
-
-### py-tupper ∞
-
-A Python package for plotting [Tupper's Self-Referential Formula](https://cariad.io/tupper/).
-
-Just install and run to see something cool:
-
-```bash
-pip3 install tupper
-python3 -m tupper
-```
-
-```text
-        █                   █                █ ██ █     █                █  █ █     █    █ ██ █      █   █
-        █                   █ █      █       █  █ █     █                █  █ █     █    █  █ █      █   █
-██      █                  █  █      █    ██ █  █ █ █ █ █ ██ ████  ███ ███ █  █ █ █ █    █  █  █      █  █
- █      █                  █  █  █ █ █       █ █  █  █  █    █ █ █ █ █ █ █ █  █ █ █ █    █ █   █      █  █
- █      █                  █  █  █ █ █       █ █  █ █ █ █    █ █ █ ███ ███ █  █  █  █    █ █   █      █  █
- █      █               █ █   █   █  █  ██        █     █                  █  █ █   █  █       █   ██  █ █
-███   █ █               █ █   █  █   █ █  █       █     █                   █ █     █  █      █   █  █ █ █
-     █  █ ██ █   ██   ███ █   █      █   █        ███ ███                   █ ███ ███ █       █     █  █ █
-███ █   █ █ █ █ █  █ █  █ █   █ ████ █  █                                                          █   █ █
-     █  █ █ █ █ █  █ █  █ █   █      █ █                                                          █    █ █
-██    █ █ █ █ █  ██   ███ █   █ █ ██ █ ████                                                       ████ █ █
-  █     █                 █   █ █  █ █                                                          █      █ █
- █      █                  █  █ █  █ █                                                          █     █  █
-█       █                  █  █ █ █  █                                                         █      █  █
-███     █                  █  █ █ █  █                                                                █  █
-        █                   █ █      █                                                               █   █
-        ███                 █ ███  ███                                                               █ ███
 ```
